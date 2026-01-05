@@ -1,0 +1,31 @@
+services:
+  database: # Nombre del servicio para la red interna
+    image: postgres:15-alpine # Imagen ligera y con versión fija
+    container_name: postgres_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init:/docker-entrypoint-initdb.d/
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin_ui
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD}
+      # Esta línea es para que pgAdmin no te pida contraseña al entrar si ya estás logueado
+      PGADMIN_CONFIG_SERVER_MODE: 'False' 
+    ports:
+      - "8000:80"
+    depends_on:
+      - database
+
+volumes:
+  postgres_data:
