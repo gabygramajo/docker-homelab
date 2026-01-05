@@ -1,0 +1,22 @@
+# Ignorar archivos de variables de entorno (Contienen llaves y contraseñas)
+**/.env
+**/.env.local
+**/.env.*.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
+
+# Ignorar datos persistentes de bases de datos o servicios
+**/data/
+**/db_data/
+**/postgres_data/
+**/mysql_data/
+**/redis_data/
+
+# Ignorar logs
+**/*.log
+**/logs/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
