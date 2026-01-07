@@ -85,11 +85,11 @@ Para ver la base de datos Northwind, debes registrar el servidor de Postgres den
 
 2. **Pestaña "General":**
 
-    - Name: `Northwind_LAB` (o el nombre que prefieras).
+    - Name: `Northwind_DB_Server` (o el nombre que prefieras).
 
 3. **Pestaña "Connection":**
 
-    - Host name/address: database (Este es el nombre del servicio en Docker, NO uses localhost).
+    - Host name/address: `database` (Este es el nombre del servicio en Docker, NO uses localhost).
 
     - Port: `5432`
 
@@ -131,4 +131,3 @@ docker compose up -d
 
 ### Repo Oficial de Northwind database for Postgres
 - [Northwind database for Postgres]('https://github.com/pthom/northwind_psql)
-
