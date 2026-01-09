@@ -130,4 +130,5 @@ docker compose up -d
 ---
 
 ### Repo Oficial de Northwind database for Postgres
-- [Northwind database for Postgres]('https://github.com/pthom/northwind_psql)
+- https://github.com/pthom/northwind_psql
+
