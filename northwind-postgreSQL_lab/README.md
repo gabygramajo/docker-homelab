@@ -26,15 +26,20 @@ Este repositorio contiene un entorno de laboratorio basado en **Docker** para pr
 
 ## ⚙️ Configuración Inicial
 
-1. **Clonar el repositorio:**
+1. INSTALAR DOCKER DESKTOP
+- https://www.docker.com/products/docker-desktop/
+
+
+2.  **Clonar el repositorio:**
 ```bash
 git clone {url-repo}
 cd {directorio-del-proyecto-descargado}
 
 ```
 
+3. Abre el proyecto con tu editor favorito.
 
-2. **Crear el archivo de variables de entorno:**
+4. **Crear el archivo de variables de entorno:**
 Crea un archivo llamado `.env` en la raíz y copia el siguiente contenido:
 ```env
 # Postgres Configuration
@@ -54,7 +59,7 @@ PGADMIN_PASSWORD=admin_pg_123
 
 ### Primera vez (Carga Automática)
 
-Para levantar el laboratorio por primera vez, ejecuta:
+Para levantar el laboratorio por primera vez (estando en la raiz del proyecto), ejecuta en la terminal:
 
 ```bash
 docker compose up -d
@@ -131,4 +136,5 @@ docker compose up -d
 
 ### Repo Oficial de Northwind database for Postgres
 - https://github.com/pthom/northwind_psql
+
 
